@@ -1,0 +1,9 @@
+<h1>Welcome to Glampfound</h1>
+
+<%= link_to "Login", google_login_path %>
+
+<h3> Select a place to avoid</h3><br>
+
+<% @trails.each do |trail| %>
+<%= trail.city %><br>
+<% end %>
