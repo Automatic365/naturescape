@@ -1,9 +1,15 @@
-<h1>Welcome to Glampfound</h1>
+<h1>Welcome to NaturEscape</h1>
 
 <%= link_to "Login", google_login_path %>
 
 <h3> Select a place to avoid</h3><br>
 
 <% @trails.each do |trail| %>
-<%= trail.city %><br>
+<%= trail.city %>, <%= trail.state %><br>
+<% end %>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Address/Zipcode/Location:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
 <% end %>

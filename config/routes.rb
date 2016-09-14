@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :users, only: [:new, :show]
+  resources :trails, only: :show
 
   get '/auth/google_oauth2', as: :google_login
   get '/auth/google_oauth2/callback', to: 'sessions#create'
   get "/signout" => "sessions#destroy", :as => :signout
+  get "/search", to: 'locations#show'
 
 end

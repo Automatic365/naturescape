@@ -24,6 +24,7 @@ gem 'figaro'
 gem 'faraday'
 gem "omniauth-google-oauth2"
 gem 'rails-rename', '~> 1.0.0'
+gem 'geocoder'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
