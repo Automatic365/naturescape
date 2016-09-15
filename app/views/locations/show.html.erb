@@ -1,1 +1,3 @@
-<%= @location %>
+<%= @location.address_components.second.long_name %>,
+<%= @location.address_components.fourth.long_name %><br>
+<%= @location.address_components.first.long_name %>
