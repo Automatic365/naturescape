@@ -1,14 +1,9 @@
 class LocationService
   attr_reader :conn
 
-  # def initialize
-  #   @conn = Faraday.new("https://maps.googleapis.com/maps/api/geocode/json?key=#{ENV['GOOGLE_API_KEY']}")
-  # end
-
   def search_by_current_location
     conn = Faraday.new("https://www.googleapis.com/geolocation/v1/geolocate?key=#{ENV['GOOGLE_API_KEY']}")
     response = conn.post
-    # require "pry"; binding.pry
     coordinates = parse(response.body).location
     search_by_coordinates(coordinates.lat, coordinates.lng)
   end
