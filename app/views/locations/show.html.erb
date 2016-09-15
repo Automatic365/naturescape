@@ -1,3 +1,5 @@
-<%= @location.address_components.second.long_name %>,
-<%= @location.address_components.fourth.long_name %><br>
-<%= @location.address_components.first.long_name %>
+<% address = @location.results.first.formatted_address.split(",") %>
+<h1><%= address.first %></h1>
+<% address.each do |add| %>
+<%= add %><br>
+<% end %>
