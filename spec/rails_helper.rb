@@ -62,3 +62,25 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+
+
+def setup_for_oauth
+  Capybara.app = Naturescape::Application
+  stub_omniauth
+end
+
+def stub_omniauth
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+    "uid"=>"1234",
+    "info"=>
+    {"name"=>"Bobby Robby",
+      "email"=>"BR@example.com",
+      "first_name"=>"Bobby",
+      "last_name"=>"Robby",
+      "image"=>"volcano.jpg"},
+      "credentials"=>{"token"=>"yepthisthegoods"},
+      "extra"=>
+      {"id_token"=>
+        "letsgoooo"}})
+end
