@@ -1,4 +1,5 @@
 <% address = @location.results.first.formatted_address.split(",") %>
+
 <h1><%= address.first %></h1>
 <% address.each do |add| %>
 <%= add %><br>
