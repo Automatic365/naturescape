@@ -9,3 +9,15 @@ class LocationsController < ApplicationController
   end
 
 end
+
+# class LocationPresenter
+#   def self.search(params)
+#     if params == #to a zip
+#      @location = Location.search(params)
+#      @location.parse_for_zip
+#    else
+#      @location = Location.search(params)
+#      @location.parse_for_address
+#    end
+#  end
+# end
