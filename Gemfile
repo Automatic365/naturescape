@@ -26,6 +26,7 @@ gem "omniauth-google-oauth2"
 gem 'rails-rename', '~> 1.0.0'
 gem 'geocoder'
 gem 'simplecov', :require => false, :group => :test
+gem 'simple_form'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

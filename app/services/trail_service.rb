@@ -1,13 +1,18 @@
 class TrailService
-  attr_reader :connection
+  attr_reader :conn
 
   def initialize
-    @connection = Faraday.new
-    @connection.headers["X-Mashape-Key"] = ENV["TRAIL_API_KEY"]
+    @conn = Faraday.new
+    @conn.headers["X-Mashape-Key"] = ENV["TRAIL_API_KEY"]
   end
 
   def all_hiking_locations
-    response = connection.get('https://trailapi-trailapi.p.mashape.com/')
+    response = conn.get('https://trailapi-trailapi.p.mashape.com/')
+    parse(response.body)
+  end
+
+  def hiking_locations_by_state(state)
+    response = conn.get("https://trailapi-trailapi.p.mashape.com/?state_cont=#{state}")
     parse(response.body)
   end
 

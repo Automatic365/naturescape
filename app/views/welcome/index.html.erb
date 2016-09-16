@@ -4,9 +4,8 @@
 
 <h3> Select a place to avoid</h3><br>
 
-<% @trails.each do |trail| %>
-<%= trail.city %>, <%= trail.state %><br>
-<% end %>
+  <% @trails.uniq.compact.sort %>
+
 
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:q, "Address/Zipcode/Location:") %>
