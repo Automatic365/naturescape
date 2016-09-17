@@ -5,19 +5,8 @@ class LocationsController < ApplicationController
       @location = Location.search_by_current_location
     else
       @location = Location.search_by_input_location(params[:q])
+      # require "pry"; binding.pry
     end
   end
 
 end
-
-# class LocationPresenter
-#   def self.search(params)
-#     if params == #to a zip
-#      @location = Location.search(params)
-#      @location.parse_for_zip
-#    else
-#      @location = Location.search(params)
-#      @location.parse_for_address
-#    end
-#  end
-# end

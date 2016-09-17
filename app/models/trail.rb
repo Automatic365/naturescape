@@ -12,4 +12,8 @@ class Trail < OpenStruct
     end
   end
 
+  def self.hiking_locations_by_state(state)
+    services.all_hiking_locations(state)
+  end
+
 end

@@ -4,3 +4,6 @@
 <% address.each do |add| %>
 <%= add %><br>
 <% end %>
+
+<%= image_tag("https://maps.googleapis.com/maps/api/staticmap?center=#{@location.results.first.formatted_address}&zoom=13&size=400x400&
+markers=color:blue%7Clabel:S%7C11211%7C11206%7C11222&key=#{ENV['GOOGLE_API_KEY']}")%>
