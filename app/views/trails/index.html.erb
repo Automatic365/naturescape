@@ -1,7 +1,7 @@
-<% trail_names = @trails.places.map do |trail| %>
-<% trail.name %>
-<% end %>
+<% trails = @trails.sort %>
 
-<% trail_names.sort.each do |name| %>
-<%= name %><br>
+<%= form_tag("/butt", method: "get") do %>
+  <%= select_tag 'trail', options_for_select(trails) %>
+  <%= hidden_field_tag 'state', params[:state] %>
+  <%= submit_tag("Search") %>
 <% end %>

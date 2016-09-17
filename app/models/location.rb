@@ -1,15 +1,12 @@
-class Location < OpenStruct
+class Location
   attr_reader :services
-  
+
   def self.services
     @services = LocationService.new
   end
 
-  def self.search_by_current_location
-    services.search_by_current_location
+  def self.nearby_current_location(lat, lng, radius = 20)
+    services.nearby_current_location(lat, lng, radius = 20)
   end
 
-  def self.search_by_input_location(address)
-    services.search_by_input_location(address)
-  end
 end

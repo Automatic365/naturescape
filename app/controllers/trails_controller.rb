@@ -1,7 +1,7 @@
 class TrailsController < ApplicationController
 
   def index
-    @trails = Trail.hiking_locations_by_state(params[:q])
+    @trails = Trail.formatted_locations_by_state(params[:state])
   end
 
 end
