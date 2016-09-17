@@ -1,10 +1,6 @@
 <h1>Welcome to NaturEscape</h1>
 
-<%= link_to "Login", google_login_path %>
-
-<h3> Select a place to avoid</h3><br>
-
-  <% @trails.uniq.compact.sort %>
+<h3> Where are you trying to escape? </h3><br>
 
 
 <%= form_tag("/search", method: "get") do %>
