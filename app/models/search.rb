@@ -9,7 +9,7 @@ class Search < OpenStruct
     services.search_by_current_location
   end
 
-  def self.search_by_input_location(address)
-    services.search_by_input_location(address)
+  def self.search_by_input_location(city, state)
+    services.search_by_input_location(city, state)
   end
 end

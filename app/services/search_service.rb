@@ -7,11 +7,11 @@ class SearchService
     search_by_coordinates(coordinates.lat, coordinates.lng)
   end
 
-  def search_by_input_location(address)
+  def search_by_input_location(city, state)
     conn = Faraday.new("https://maps.googleapis.com/maps/api/geocode/json?key=#{ENV['GOOGLE_API_KEY']}")
 
     response = conn.get do |req|
-      req.params['address'] = address
+      req.params['address'] = "#{city}, #{state}"
     end
     parse(response.body)
   end

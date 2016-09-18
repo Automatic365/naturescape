@@ -6,3 +6,9 @@
   <%= select_tag 'state', options_for_select(States.states_list) %>
   <%= submit_tag("Search") %>
 <% end %>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search By Current :") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
