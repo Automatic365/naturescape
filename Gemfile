@@ -24,6 +24,9 @@ gem 'figaro'
 gem 'faraday'
 gem "omniauth-google-oauth2"
 gem 'rails-rename', '~> 1.0.0'
+gem 'geocoder'
+gem 'simplecov', :require => false, :group => :test
+gem 'simple_form'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -51,6 +54,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-commands-rspec'
 end
 
 gem 'rails_12factor', group: :production

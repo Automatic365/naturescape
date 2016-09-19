@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  validates_presence_of :uid, :credentials
+  validates_uniqueness_of :uid, :credentials
+
 
   def self.create_with_omniauth(auth)
     create! do |user|

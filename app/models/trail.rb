@@ -12,4 +12,8 @@ class Trail < OpenStruct
     end
   end
 
+  def self.formatted_locations_by_state(state)
+    services.formatted_locations_by_state(state)
+  end
+
 end
