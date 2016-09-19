@@ -8,7 +8,6 @@
 <% end %>
 
 <%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:q, "Search By Current :") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
+  <%= hidden_field_tag(:q) %>
+  <%= submit_tag("Search By Current") %>
 <% end %>

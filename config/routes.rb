@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get "/signout" => "sessions#destroy", :as => :signout
   get "/search", to: 'locations#show'
   get "/location", to: 'trails#index'
+  get "/alternative", to: 'alternative_activities#index'
 
 end
