@@ -1,9 +1,29 @@
 <% address = @location.results.first.formatted_address.split(",") %>
-
-<h1><%= address.first %></h1>
-<% address.each do |add| %>
-<%= add %><br>
+<% if params[:state] %>
+<% lat = @location.results.first.geometry.bounds.northeast.lat %>
+<% lng = @location.results.first.geometry.bounds.northeast.lng %>
 <% end %>
 
-<%= image_tag("https://maps.googleapis.com/maps/api/staticmap?center=#{@location.results.first.formatted_address}&zoom=13&size=400x400&
-markers=color:blue%7Clabel:S%7C11211%7C11206%7C11222&key=#{ENV['GOOGLE_API_KEY']}")%>
+<div id="container-fluid">
+  <div class="location-info">
+    <h1><%= address.first %></h1>
+    <% address.each do |add| %>
+    <%= add %><br>
+    <% end %>
+    <%= image_tag("https://maps.googleapis.com/maps/api/staticmap?center=#{@location.results.first.formatted_address}&zoom=13&size=400x400&
+    markers=color:blue%7Clabel:S%7C11211%7C11206%7C11222&key=#{ENV['GOOGLE_API_KEY']}")%>
+  </div>
+</div>
+
+<div id="activity-box">
+  <div class="suggestions">
+    <h1> What would you rather be doing?</h1>
+    <%= form_tag("/alternative", method: "get") do %>
+      <%= select_tag 'alternative', options_for_select(Activity.activities) %>
+      <%= hidden_field_tag 'lat', "#{lat}" %>
+      <%= hidden_field_tag 'lng', "#{lng}"%>
+      <%= hidden_field_tag 'radius', 20 %>
+      <%= submit_tag("Search") %>
+    <% end %>
+  </div>
+</div>
