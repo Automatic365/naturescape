@@ -9,5 +9,5 @@
 
 <%= form_tag("/search", method: "get") do %>
   <%= hidden_field_tag(:q) %>
-  <%= submit_tag("Search By Current") %>
+  <%= submit_tag("Search By Current", class:'btn btn-primary') %>
 <% end %>
