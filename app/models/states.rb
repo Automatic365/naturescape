@@ -1,7 +1,7 @@
 class States
 
   def self.states_list
-    ["Alaska","Arizona", "Arkansas", "California", "Colorado", "Florida",
+    ["Arizona", "Arkansas", "California", "Colorado", "Florida",
     "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky",
     "Louisiana", "Maryland", "Massachusetts", "Michigan", "Minnesota",
     "Montana", "Nebraska", "New Mexico", "New York", "North Carolina", "Ohio",
