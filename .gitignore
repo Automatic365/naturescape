@@ -21,3 +21,6 @@
 
 # Ignore SimpleCov coverage
 coverage
+
+# Ignore cassettes
+/spec/cassettes
