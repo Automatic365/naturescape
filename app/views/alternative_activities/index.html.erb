@@ -1,3 +1,7 @@
-<h1> SEARCH RESULTS </h1>
-<% require "pry"; binding.pry %>
-<%= @alt_activities %>
+<h1><%= params[:type].capitalize %>s near your location:</h1><br>
+
+<% @alt_activities.results.each do |activity| %>
+  <%= activity.name %>
+  <%= activity.vicinity %>
+  <%= activity.rating %><br>
+  <% end %>

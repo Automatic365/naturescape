@@ -7,6 +7,30 @@
 #activity-box {
   text-align: right
   float:left;
+  padding-top: 1px;
+}
+
+
+#welcome {
+  text-align: center;
+}
+
+.excuses {
+  text-align: center;
+
+}
+
+.form-control {
+  width: 50%;
+  margin-left: 325px;       /* This is when the drop down box appears */
+
+  position: relative;
+  align: center;
+  font-size: 24px;
+}
+
+.btn-primary {
+  text-align: center;
 }
 
 .home {

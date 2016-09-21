@@ -1,8 +1,8 @@
 class AlternativeActivityService
   attr_reader :conn
 
-  def initialize(lat,lng,type)
-    @conn = Faraday.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=#{ENV['GOOGLE_API_KEY']}&location=#{lat},#{lng}&rankby=distance&type=#{type}")
+  def initialize(location, rankby, type)
+    @conn = Faraday.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=#{ENV['GOOGLE_API_KEY']}&location=#{location}&rankby=#{rankby}&type=#{type}")
   end
 
   def find_activities_by_type
