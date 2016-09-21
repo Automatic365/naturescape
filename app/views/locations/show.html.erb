@@ -2,6 +2,9 @@
 <% if params[:state] %>
 <% lat = @location.results.first.geometry.bounds.northeast.lat.to_f %>
 <% lng = @location.results.first.geometry.bounds.northeast.lng.to_f %>
+<% else %>
+<% lat = @location.results.first.geometry.location.lat %>
+<% lng = @location.results.first.geometry.location.lng %>
 <% end %>
 
 <div id="container-fluid">
