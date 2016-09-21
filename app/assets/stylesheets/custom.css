@@ -1,3 +1,6 @@
+body{
+  font-family: 'Comfortaa', cursive;
+}
 .location-info {
   text-align: left;
   float: left;
@@ -5,7 +8,7 @@
 }
 
 #activity-box {
-  text-align: right;
+  text-align: right
   float:left;
   padding-top: 1px;
 }
@@ -30,5 +33,21 @@
 }
 
 .btn-primary {
+  text-align: center;
+}
+
+#dumb-button {
+
+}
+#trail-bar {
+  width: 40%;
+  align: center;
+}
+
+.trail-header {
+  text-align: center;
+}
+
+#trail-form {
   text-align: center;
 }

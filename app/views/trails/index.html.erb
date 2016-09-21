@@ -1,7 +1,11 @@
+<h1 class="trail-header"> Where are your "friends" trying to take you? <h1>
+
 <% trails = @trails.sort %>
 
+<div id="trail-form">
 <%= form_tag("/search", method: "get") do %>
-  <%= select_tag 'trail', options_for_select(trails), class:"form-control" %>
-  <%= hidden_field_tag 'state', params[:state] %>
-  <%= submit_tag("Search", class: 'btn-primary') %>
+<%= select_tag 'trail', options_for_select(trails), class:"form-control", id:"trail-bar" %>
+<%= hidden_field_tag 'state', params[:state] %>
+<%= submit_tag("Search", id:"dumb-button", class: 'btn btn-primary') %>
 <% end %>
+</div>

@@ -1,7 +1,21 @@
-<h1><%= params[:type].capitalize %>s near your location:</h1><br>
+<h1><%= @alt_activities.results.first.types.first.pluralize.capitalize %> near your location:</h1><br>
 
-<% @alt_activities.results.each do |activity| %>
-  <%= activity.name %>
-  <%= activity.vicinity %>
-  <%= activity.rating %><br>
+
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Google Places Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @alt_activities.results.each do |activity| %>
+    <tr>
+      <td><%= activity.name %></td>
+      <td><%= activity.vicinity %></td>
+      <td><%= activity.rating %></td>
+    </tr>
+  </tbody>
   <% end %>
+</table>
