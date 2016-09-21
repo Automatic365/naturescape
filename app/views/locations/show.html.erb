@@ -1,7 +1,7 @@
 <% address = @location.results.first.formatted_address.split(",") %>
 <% if params[:state] %>
-<% lat = @location.results.first.geometry.bounds.northeast.lat %>
-<% lng = @location.results.first.geometry.bounds.northeast.lng %>
+<% lat = @location.results.first.geometry.bounds.northeast.lat.to_f %>
+<% lng = @location.results.first.geometry.bounds.northeast.lng.to_f %>
 <% end %>
 
 <div id="container-fluid">
@@ -19,11 +19,10 @@
   <div class="suggestions">
     <h1> What would you rather be doing?</h1>
     <%= form_tag("/alternative", method: "get") do %>
-      <%= select_tag 'alternative', options_for_select(Activity.activities) %>
-      <%= hidden_field_tag 'lat', "#{lat}" %>
-      <%= hidden_field_tag 'lng', "#{lng}"%>
-      <%= hidden_field_tag 'radius', 20 %>
-      <%= submit_tag("Search") %>
+      <%= select_tag 'type', options_for_select(Activity.activities), class:'form-control' %>
+      <%= hidden_field_tag 'location', "#{lat.to_f}, #{lng.to_f}" %>
+      <%= hidden_field_tag 'rankby', "distance" %><br>
+      <%= submit_tag("Show me the fun stuff!", class: 'btn-primary') %>
     <% end %>
   </div>
 </div>
