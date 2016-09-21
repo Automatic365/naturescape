@@ -1,5 +1,6 @@
-Welcome, <%= current_user.first_name %>!<br>
+<div class="dashboard">
+  <h1 class="header">Welcome, <%= current_user.first_name %>!</h1><br>
 
-<%= link_to "Home", root_path %><br>
-
-<%= link_to "Logout", signout_path %>
+  <a href="/" class="btn btn-info" role="button">Home</a>
+  <a href="/signout" class="btn btn-danger" role="button">Log Out</a>
+</div>
