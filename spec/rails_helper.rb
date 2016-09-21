@@ -65,7 +65,7 @@ end
 
 
 def setup_for_oauth
-  Capybara.app = Naturescape::Application
+  Capybara.app = Glampfound::Application
   stub_omniauth
 end
 

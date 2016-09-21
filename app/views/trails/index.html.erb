@@ -1,7 +1,7 @@
 <% trails = @trails.sort %>
 
 <%= form_tag("/search", method: "get") do %>
-  <%= select_tag 'trail', options_for_select(trails) %>
+  <%= select_tag 'trail', options_for_select(trails), class:"form-control" %>
   <%= hidden_field_tag 'state', params[:state] %>
-  <%= submit_tag("Search") %>
+  <%= submit_tag("Search", class: 'btn-primary') %>
 <% end %>
