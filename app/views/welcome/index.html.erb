@@ -11,8 +11,6 @@
     OR<br>
 
 <%= form_tag("/search", method: "get") do %>
-  <%= hidden_field_tag(:q) %>
-  <%= submit_tag("Search By Current Location") %>
 <%= hidden_field_tag(:q) %>
 <%= submit_tag("Search By Current Location", class:'btn btn-primary') %>
 <% end %>
