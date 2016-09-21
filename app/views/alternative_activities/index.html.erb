@@ -1,5 +1,17 @@
-<h1 class="header"><%= @alt_activities.results.first.types.first.pluralize.capitalize %> near your location:</h1><br>
+<% if @alt_activities.status == "ZERO_RESULTS" %>
+<h1 class="search-header"> Womp Womp...No locations of that type found in the area. Try searching for something else to do:</h1>
+<div class="center">
+<%= form_tag("/alternative", method: "get") do %>
+<%= select_tag 'type', options_for_select(Activity.activities), class:'form-control' %>
+<%= hidden_field_tag 'location', params[:location] %>
+<%= hidden_field_tag 'rankby', "distance" %><br>
+<%= submit_tag("Let's Try Again!", class: 'btn-primary') %>
+<% end %>
+</div>
 
+<% else %>
+
+<h1 class="header"><%= @alt_activities.results.first.types.first.pluralize.capitalize %> near your location:</h1><br>
 <table class="table">
   <thead class="thead-inverse">
     <tr>
@@ -18,3 +30,4 @@
   </tbody>
   <% end %>
 </table>
+<% end %>

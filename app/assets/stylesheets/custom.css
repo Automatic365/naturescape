@@ -41,9 +41,6 @@ body{
   text-align: center;
 }
 
-#dumb-button {
-
-}
 #trail-bar {
   width: 40%;
   align: center;
@@ -79,6 +76,15 @@ body{
   text-align: center;
 }
 
-.subheader {
-  padding-top: 1px;
+.dashboard {
+  text-align: center;
+}
+
+.search-header {
+  color: white;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
 }
