@@ -8,7 +8,7 @@ body{
 }
 
 #activity-box {
-  text-align: right
+  text-align: right;
   float:left;
   padding-top: 1px;
 }
@@ -25,7 +25,7 @@ body{
 
 .form-control {
   width: 50%;
-  margin-left: 325px;       /* This is when the drop down box appears */
+  margin-left: 325px;      
 
   position: relative;
   align: center;
