@@ -1,10 +1,15 @@
 body{
   font-family: 'Comfortaa', cursive;
+  background-image: url(background.jpg);
 }
 .location-info {
   text-align: left;
   float: left;
   margin-right: 150px;
+}
+
+.header {
+  color: white;
 }
 
 #activity-box {
@@ -46,8 +51,34 @@ body{
 
 .trail-header {
   text-align: center;
+  color: white;
 }
 
 #trail-form {
   text-align: center;
+}
+
+.suggestions {
+  color: white;
+}
+
+.location-info {
+  color: white;
+}
+
+.table {
+  background-color: white;
+}
+
+.well {
+  text-align: center;
+  background-color: rgba(245, 245, 245, 0.4);
+}
+
+#welcome-form {
+  text-align: center;
+}
+
+.subheader {
+  padding-top: 1px;
 }
