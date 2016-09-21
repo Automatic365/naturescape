@@ -32,3 +32,19 @@
 .btn-primary {
   text-align: center;
 }
+
+#dumb-button {
+
+}
+#trail-bar {
+  width: 40%;
+  align: center;
+}
+
+.trail-header {
+  text-align: center;
+}
+
+#trail-form {
+  text-align: center;
+}
