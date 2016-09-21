@@ -20,10 +20,10 @@
   <div class="suggestions">
     <h1> What would you rather be doing?</h1>
     <%= form_tag("/alternative", method: "get") do %>
-      <%= select_tag 'type', options_for_select(Activity.activities) %>
+      <%= select_tag 'type', options_for_select(Activity.activities), class:'form-control' %>
       <%= hidden_field_tag 'location', "#{lat.to_f}, #{lng.to_f}" %>
-      <%= hidden_field_tag 'rankby', "distance" %>
-      <%= submit_tag("Search") %>
+      <%= hidden_field_tag 'rankby', "distance" %><br>
+      <%= submit_tag("Show me the fun stuff!", class: 'btn-primary') %>
     <% end %>
   </div>
 </div>
