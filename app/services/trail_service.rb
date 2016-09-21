@@ -56,5 +56,5 @@ private
       location.lat == 0.0
     end
   end
-  #
+  
 end
