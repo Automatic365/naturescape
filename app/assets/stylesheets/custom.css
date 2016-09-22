@@ -17,6 +17,7 @@ body{
   float:left;
   padding-top: 1px;
 }
+
 #search-box {
   text-align: center;
 }
@@ -94,4 +95,8 @@ body{
 
 .excuses {
   color: white;
+}
+
+.nav-excuse {
+  color: red;
 }
