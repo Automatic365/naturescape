@@ -31,3 +31,15 @@
   <% end %>
 </table>
 <% end %>
+
+<div id="activity-box">
+  <div class="suggestions">
+    <h1> Anything else you want to check out?</h1>
+    <%= form_tag("/alternative", method: "get") do %>
+    <%= select_tag 'type', options_for_select(Activity.activities), class:'form-control' %>
+    <%= hidden_field_tag 'location', params[:location] %>
+    <%= hidden_field_tag 'rankby', "distance" %><br>
+    <%= submit_tag("Show me more fun stuff!", class: 'btn-primary') %>
+    <% end %>
+  </div>
+</div>
