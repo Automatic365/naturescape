@@ -9,7 +9,7 @@ RSpec.feature 'Guest login with google oauth' do
       visit '/'
 
       expect(page).to have_content("Welcome to NaturEscape")
-      expect(page).to have_content("Where are you trying to escape?")
+      expect(page).to have_content("Where are you trying to escape from?")
       expect(page).to have_link("Login")
 
       click_on "Login"

@@ -7,7 +7,7 @@ describe 'Visitor can choose a trail', type: :feature do
       visit root_path
 
       select 'Colorado', from: :state
-      click_on 'Search'
+      click_on 'Search by State'
 
       expect(current_path).to eq(location_path)
 
