@@ -5,7 +5,7 @@
 
     <%= form_tag("/location", method: "get", class: "states-list") do %>
     <%= select_tag 'state', options_for_select(States.states_list), class:"form-control" %>
-    <%= submit_tag("Search", class:'btn btn-primary') %>
+    <%= submit_tag("Search by State", class:'btn btn-primary') %>
     <% end %><br>
     <div class="header">
     OR<br>
