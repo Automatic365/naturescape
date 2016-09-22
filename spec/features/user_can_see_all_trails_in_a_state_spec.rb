@@ -13,8 +13,6 @@ describe 'Visitor can choose a trail', type: :feature do
 
       expect(page).to have_content "friends"
       expect(page).to have_content "Abrams"
-      expect(page).to have_content "Abrams"
-      expect(page).to have_content "Abrams"
       expect(page).to have_content "Big Canyon"
       expect(page).to have_content "Blue Mountain"
 

@@ -46,6 +46,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'vcr'
   gem 'webmock'
+  gem "shoulda-kept-respond-with-content-type"
 end
 
 
