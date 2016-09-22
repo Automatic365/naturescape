@@ -44,6 +44,9 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'pry-rails'
+  gem 'vcr'
+  gem 'webmock'
+  gem "shoulda-kept-respond-with-content-type"
 end
 
 

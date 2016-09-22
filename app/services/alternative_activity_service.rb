@@ -6,7 +6,6 @@ class AlternativeActivityService
   end
 
   def find_activities_by_type
-    # require "pry"; binding.pry
     response = conn
     parse(response.body)
   end
