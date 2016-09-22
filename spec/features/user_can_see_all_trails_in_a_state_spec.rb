@@ -6,25 +6,18 @@ describe 'Visitor can choose a trail', type: :feature do
 
       visit root_path
 
-      select 'Colorado', from: :location
-      select 'October', from: :date
-      select '10 miles', from: :radius
-      click_on 'Submit'
+      select 'Colorado', from: :state
+      click_on 'Search'
 
-      expect(current_path).to eq(festivals_path)
+      expect(current_path).to eq(location_path)
 
-      expect(page).to have_content "Pumpkin Festival"
-      expect(page).to have_content "Littleton"
-      expect(page).to have_content "Colorado"
-      expect(page).to have_content "8500 Deer Creek Canyon Rd"
-      expect(page).to have_link    "View details and find campgrounds"
+      expect(page).to have_content "friends"
+      expect(page).to have_content "Abrams"
+      expect(page).to have_content "Abrams"
+      expect(page).to have_content "Abrams"
+      expect(page).to have_content "Big Canyon"
+      expect(page).to have_content "Blue Mountain"
 
-      first('.Pumpkin').click_link('View details and find campgrounds')
-
-      expect(page).to have_content "Pumpkin Festival"
-      expect(page).to have_content "Denver"
-      expect(page).to have_content "Colorado"
-      expect(page).to have_content "1007 York Street"
     end
   end
 end
