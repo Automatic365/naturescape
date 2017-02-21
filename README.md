@@ -1,5 +1,7 @@
 [![Code Climate](https://codeclimate.com/github/Automatic365/naturescape/badges/gpa.svg)](https://codeclimate.com/github/Automatic365/naturescape)
 
+![](http://i68.tinypic.com/2q1t151.jpg)
+
 **Live Demo: https://naturescape.herokuapp.com/**
 
 ## About
