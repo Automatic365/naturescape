@@ -38,7 +38,7 @@ gem 'simple_form'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 8.0.0'
   gem 'capybara'
   gem 'launchy'
   gem 'shoulda-matchers'
